@@ -28,7 +28,6 @@
 
           </div>
 
-
         <div class="well well-sm">
           <form class="form-horizontal" action="" method="post">
           <fieldset>
@@ -37,7 +36,6 @@
     
             <!-- Name input-->
             <div class="form-group">
-              <label class="col-md-3 control-label" for="name"></label>
               <div class="col-md-9">
                 <input id="name" name="name" type="text" placeholder="Имя" class="form-control" required="">
               </div>
@@ -45,7 +43,6 @@
     
             <!-- Email input-->
             <div class="form-group">
-              <label class="col-md-3 control-label" for="email"></label>
               <div class="col-md-9">
                 <input id="email" name="email" type="text" placeholder="Email" class="form-control" required="">
               </div>
@@ -53,11 +50,18 @@
     
             <!-- Message body -->
             <div class="form-group">
-              <label class="col-md-3 control-label" for="message"></label>
               <div class="col-md-9">
                 <textarea class="form-control" id="message" name="message" placeholder="Ваш отзыв..." rows="5"></textarea>
               </div>
             </div>
+
+              <!-- File Button -->
+              <div class="form-group">
+                  <label class="col-md-4 control-label" for="filebutton"></label>
+                  <div class="col-md-4">
+                      <input id="filebutton" name="filebutton" class="input-file" type="file">
+                  </div>
+              </div>
     
             <!-- Form actions -->
             <div class="form-group">
