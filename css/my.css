@@ -1,11 +1,15 @@
+
 .red {
 	background-color: red;
 }
 
+.well {
+	margin-top: 20px;
+}
 
 /***** Стиль вставки картинки *****/
-.image-preview {
-	margin-left:17px;
+.input-group {
+	margin-left: 80px;
 	margin-bottom: 25px;
 }
 .image-preview-input {
