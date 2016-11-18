@@ -8,9 +8,5 @@
     </div>
 </div>
 
-<div class="col-md-10">
-    <input type="text" onkeyup="ajax_request(this.value);">
-    <button onclick="ajax_request();">Нажать</button>
-    <div id="result">This is the result div</div>
-</div>
+<div id="test"></div>
 
