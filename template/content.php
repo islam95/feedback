@@ -1,12 +1,13 @@
 
-<div class="jumbotron">
-    <div class="col-md-offset-2">
-        <h2 class="text-muted">Отзывы</h2>
+<nav class="navbar navbar-inverse">
+    <p class="navbar-brand">Отзывы</p>
+    <div class="pull-right" style="padding-right: 15px;">
+        <button class="btn btn-primary navbar-btn">Админ</button>
     </div>
-    <div class="text-right">
-        <button class="btn btn-primary">Админ</button>
-    </div>
+</nav>
+<!-- Feedback content -->
+<div class="col-md-8 col-md-offset-2">
+
+    <div id="test"></div>
+
 </div>
-
-<div id="test"></div>
-

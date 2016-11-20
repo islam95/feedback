@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -22,7 +23,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body onload="ajax_request();">
 
 <div class="container">
     <div class="row">

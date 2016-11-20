@@ -6,5 +6,5 @@
  * Time: 02:51
  */
 
-echo "Just a string";
+
 
