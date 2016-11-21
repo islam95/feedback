@@ -1,32 +1,35 @@
 
 <div class="col-md-8 col-md-offset-2">
     <div class="well well-sm">
-        <form class="form-horizontal" action="" method="post">
+        <form class="form-horizontal" action="" method="post" id="my_form" name="my_form">
             <fieldset>
                 <!-- Form Name -->
                 <legend class="text-center">Оставить отзыв</legend>
 
                 <!-- Name input-->
+                <div id="name-error" class="errorForm"></div>
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <input id="name" name="name" type="text" placeholder="Имя" class="form-control" required="">
+                        <input id="name" name="name" type="text" placeholder="Имя" class="form-control" minlength="2" required>
                     </div>
                 </div>
 
                 <!-- Email input-->
+                <div id="email-error" class="errorForm"></div>
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <input id="email" name="email" type="text" placeholder="Email" class="form-control" required="">
+                        <input id="email" name="email" type="text" placeholder="Email" class="form-control" required>
                     </div>
                 </div>
 
                 <!-- Message body -->
+                <div id="message-error" class="errorForm"></div>
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <textarea class="form-control" id="message" name="message" placeholder="Ваш отзыв..." rows="5" required=""></textarea>
+                        <textarea class="form-control" id="message" name="message" placeholder="Ваш отзыв..." rows="5" required></textarea>
                     </div>
                 </div>
 
@@ -43,10 +46,10 @@
                         <div class="btn btn-info image-preview-input">
                             <span class="glyphicon glyphicon-folder-open"></span>
                             <span class="image-preview-input-title"> Файл</span>
-                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                            <input type="file" accept="image/png, image/jpeg, image/jpg, image/gif" name="input-file-preview"/>
                         </div>
                     </span>
-                        <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                        <input type="text" id="file" class="form-control image-preview-filename" disabled="disabled">
                         <!-- don't give a name === doesn't send on POST/GET -->
                     </div>
                 </div>
@@ -54,11 +57,12 @@
                 <!-- Form actions -->
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                        <button id="preview-btn" class="btn btn-warning prosmotr" onclick="ajax_request();">Посмотреть</button>
+                        <button id="preview-btn" class="btn btn-warning prosmotr" onclick="ajax_preview();">Посмотреть</button>
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Отправить</button>
                     </div>
                 </div>
             </fieldset>
         </form>
+
     </div>
 </div>

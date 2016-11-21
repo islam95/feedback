@@ -8,6 +8,7 @@
 <!-- Feedback content -->
 <div class="col-md-8 col-md-offset-2">
 
-    <div id="test"></div>
+    <div id="all_feed"></div>
+    <div id="feed_preview"></div>
 
 </div>

@@ -23,7 +23,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body onload="ajax_request();">
+<body onload="ajax_onload();">
 
 <div class="container">
     <div class="row">
