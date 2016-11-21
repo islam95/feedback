@@ -73,7 +73,19 @@ function ajax_preview(preview_feedback) {
     xmlhttp.send(); // Sending the data to the page
 }
 
-function ajax_edit(edit_id) {
+function ajax_edit(req_type, edit_id) {
+
+    if(req_type == 'edit_request'){
+        ed_name = '';
+        ed_email = '';
+        ed_message = '';
+        ed_image = '';
+    } else {
+        var ed_name = document.getElementById('name').value;
+        var ed_email = document.getElementById('email').value;
+        var ed_message = document.getElementById('message').value;
+        var ed_image = document.getElementById('file').value;
+    }
 
     var xmlhttp = new XMLHttpRequest();
 
@@ -81,10 +93,20 @@ function ajax_edit(edit_id) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
             var edit_form = document.getElementById("edit_form");
             edit_form.innerHTML = xmlhttp.responseText;
+
+            if(req_type == 'edit_button'){
+                /*
+                var edit_message = document.getElementById("edit_message");
+                edit_message.innerHTML = '<div style="padding: 20px;" class="bg-success">Отзыв успешно изменён!</div>';
+                */
+               // window.location.reload();
+            }
+
         }
     }
     // Creating the request
-    xmlhttp.open('GET', 'modules/edit_form.php?edit_id='+edit_id, true);
+    xmlhttp.open('GET', 'modules/edit_form.php?req_type='+req_type+'&edit_id='+edit_id+
+        '&ed_name='+ed_name+'&ed_email='+ed_email+'&ed_message='+ed_message+'&ed_image='+ed_image, true);
     xmlhttp.send(); // Sending the data to the page
 }
 

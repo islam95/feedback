@@ -48,7 +48,7 @@
                         </div>
                     </td>
                     <td align="center">
-                        <button class="btn btn-default" onclick="ajax_edit(<?php echo $rows['id']; ?>);"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button class="btn btn-default" onclick="ajax_edit('edit_request', <?php echo $rows['id']; ?>);"><span class="glyphicon glyphicon-pencil"></span></button>
                         <button class="btn btn-danger" onclick="ajax_delete(<?php echo $rows['id']; ?>);"><span class="glyphicon glyphicon-trash"></span></button>
                     </td>
                 </tr>
@@ -60,6 +60,7 @@
 
         </table>
 
+        <div id="edit_message"></div>
         <div id="edit_form"></div>
         <div id="remove"></div>
 

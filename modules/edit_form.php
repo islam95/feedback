@@ -3,7 +3,7 @@ require_once '../classes/DB.php';
 
 $db = new DB();
 
-if($_REQUEST['edit_id'] != ''){
+if($_REQUEST['req_type'] == 'edit_request'){
 
     $sql = "SELECT * FROM otziv WHERE id = '$_REQUEST[edit_id]'";
     $result = $db->query($sql);
@@ -42,7 +42,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <textarea class="form-control" id="message" value="<?php echo $rows['description']; ?>" name="message" placeholder="Ваш отзыв..." rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" placeholder="Ваш отзыв..." rows="5" required><?php echo $rows['description']; ?></textarea>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
                 <!-- Form actions -->
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary" onclick="ajax_send('send_feedback');">Изменить</button>
+                        <button type="submit" class="btn btn-primary" onclick="ajax_edit('edit_button', <?php echo $rows['id']; ?>);">Изменить</button>
                     </div>
                 </div>
             </fieldset>
@@ -81,6 +81,12 @@ while ($rows = mysqli_fetch_assoc($result)) {
 
 
 <?php }
+
+} elseif($_REQUEST['req_type'] == 'edit_button') {
+
+    $sql = "UPDATE otziv SET name = '$_REQUEST[ed_name]', email = '$_REQUEST[ed_email]', description = '$_REQUEST[ed_message]', 
+            image = '$_REQUEST[ed_image]' WHERE id = '$_REQUEST[edit_id]'";
+    $result = $db->query($sql);
 
 }
 
