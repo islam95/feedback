@@ -1,17 +1,30 @@
+<?php
+require_once '../classes/DB.php';
+
+$db = new DB();
+
+if($_REQUEST['edit_id'] != ''){
+
+    $sql = "SELECT * FROM otziv WHERE id = '$_REQUEST[edit_id]'";
+    $result = $db->query($sql);
+
+while ($rows = mysqli_fetch_assoc($result)) {
+
+?>
 
 <div class="col-md-8 col-md-offset-2">
     <div class="well well-sm">
         <form class="form-horizontal" action="" method="post" id="my_form" name="my_form">
             <fieldset>
                 <!-- Form Name -->
-                <legend class="text-center">Оставить отзыв</legend>
+                <legend class="text-center">Изменить отзыв</legend>
 
                 <!-- Name input-->
                 <div id="name-error" class="errorForm col-md-offset-1"></div>
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <input id="name" name="name" type="text" placeholder="Имя" class="form-control" minlength="2" required>
+                        <input id="name" name="name" value="<?php echo $rows['name']; ?>" type="text" placeholder="Имя" class="form-control" minlength="2" required>
                     </div>
                 </div>
 
@@ -20,7 +33,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <input id="email" name="email" type="text" placeholder="Email" class="form-control" required>
+                        <input id="email" name="email" value="<?php echo $rows['email']; ?>" type="text" placeholder="Email" class="form-control" required>
                     </div>
                 </div>
 
@@ -29,7 +42,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-1"></label>
                     <div class="col-md-9">
-                        <textarea class="form-control" id="message" name="message" placeholder="Ваш отзыв..." rows="5" required></textarea>
+                        <textarea class="form-control" id="message" value="<?php echo $rows['description']; ?>" name="message" placeholder="Ваш отзыв..." rows="5" required></textarea>
                     </div>
                 </div>
 
@@ -49,7 +62,7 @@
                             <input type="file" accept="image/png, image/jpeg, image/jpg, image/gif" name="input-file-preview"/>
                         </div>
                     </span>
-                        <input type="text" id="file" class="form-control image-preview-filename" disabled="disabled">
+                        <input type="text" value="<?php echo $rows['image']; ?>" id="file" class="form-control image-preview-filename" disabled="disabled">
                         <!-- don't give a name === doesn't send on POST/GET -->
                     </div>
                 </div>
@@ -57,8 +70,7 @@
                 <!-- Form actions -->
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                        <button id="preview-btn" class="btn btn-warning prosmotr" onclick="ajax_preview('preview_feedback');">Посмотреть</button>
-                        <button type="submit" class="btn btn-primary" onclick="ajax_send('send_feedback');"><span class="glyphicon glyphicon-send"></span> Отправить</button>
+                        <button type="submit" class="btn btn-primary" onclick="ajax_send('send_feedback');">Изменить</button>
                     </div>
                 </div>
             </fieldset>
@@ -66,3 +78,10 @@
 
     </div>
 </div>
+
+
+<?php }
+
+}
+
+?>

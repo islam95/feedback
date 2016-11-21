@@ -10,6 +10,5 @@
 <!-- File input javascript -->
 <script src="js/fileInput.js"></script>
     <script src="js/formValidation.js"></script>
-    <script src="js/feedPreview.js"></script>
 </body>
 </html>

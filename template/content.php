@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-inverse">
     <p class="navbar-brand">Отзывы</p>
     <div class="pull-right" style="padding-right: 15px;">
@@ -8,7 +7,9 @@
 <!-- Feedback content -->
 <div class="col-md-8 col-md-offset-2">
 
-    <div id="all_feed"></div>
     <div id="feed_preview"></div>
+    <div id="all_feed"></div>
+    <div id="feed_send"></div>
+
 
 </div>
