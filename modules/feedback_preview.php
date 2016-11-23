@@ -10,7 +10,7 @@ if ($_REQUEST['preview_feed'] != ''){
 
 }
 
-    ?>
+?>
 
 <div class="well well-sm">
     <div class="media">

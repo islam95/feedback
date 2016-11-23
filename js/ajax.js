@@ -37,42 +37,6 @@ function ajax_send(send_feedback) {
     xmlhttp.send(); // Sending the data to the page
 }
 
-function ajax_preview(preview_feedback) {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var image = document.getElementById('file').value;
-
-    if(preview_feedback == ''){
-        preview_feedback = '';
-    }
-    if(name == ''){
-        name = '';
-    }
-    if(email == ''){
-        email = '';
-    }
-    if (message == ''){
-        message = '';
-    }
-    if (image == ''){
-        image = '';
-    }
-
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var feed_preview = document.getElementById("feed_preview");
-            feed_preview.innerHTML = xmlhttp.responseText;
-        }
-    }
-    // Creating the request
-    xmlhttp.open('GET', 'modules/feedback_preview.php?preview_feed='+preview_feedback+'&name='+
-        name+'&email='+email+'&message='+message+'&image='+image, true);
-    xmlhttp.send(); // Sending the data to the page
-}
-
 function ajax_edit(req_type, edit_id) {
 
     if(req_type == 'edit_request'){

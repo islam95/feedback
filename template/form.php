@@ -57,7 +57,7 @@
                 <!-- Form actions -->
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                        <button id="preview-btn" class="btn btn-warning prosmotr" onclick="ajax_preview('preview_feedback');">Посмотреть</button>
+                        <div id="preview-btn" class="btn btn-warning prosmotr">Посмотреть</div>
                         <button type="submit" class="btn btn-primary" onclick="ajax_send('send_feedback');"><span class="glyphicon glyphicon-send"></span> Отправить</button>
                     </div>
                 </div>
