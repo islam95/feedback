@@ -1,11 +1,25 @@
 <nav class="navbar navbar-inverse">
     <p class="navbar-brand">Отзывы</p>
     <div class="pull-right" style="padding-right: 15px;">
-        <button class="btn btn-primary navbar-btn">Админ</button>
+        <a href="?page=login" class="btn btn-primary navbar-btn" role="button">Админ логин</a>
     </div>
 </nav>
 <!-- Feedback content -->
 <div class="col-md-8 col-md-offset-2">
+
+    <div class="sorting">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" name="option1" id="option1" autocomplete="off" checked> По дате
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="option2" id="option2" autocomplete="off"> По имени
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="option3" id="option3" autocomplete="off"> По email
+            </label>
+        </div>
+    </div>
 
     <div id="all_feed"></div>
     <div id="feed_send"></div>

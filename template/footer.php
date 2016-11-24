@@ -9,6 +9,6 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- File input javascript -->
 <script src="js/fileInput.js"></script>
-    <script src="js/formValidation.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

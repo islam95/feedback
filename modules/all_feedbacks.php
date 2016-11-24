@@ -7,8 +7,10 @@
  */
 include '../classes/DB.php';
 $db = new DB();
-$sql = "SELECT * FROM otziv";
+$sql = "SELECT * FROM otziv ORDER BY date DESC";
+
 $result = $db->query($sql);
+
 while ($rows = mysqli_fetch_assoc($result)){
     ?>
 

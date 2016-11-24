@@ -12,7 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
 
     <!-- Ajax javascript for ajax request -->
     <script src="js/ajax.js"></script>

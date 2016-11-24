@@ -107,5 +107,53 @@ class DB
     }
 
 
+    // Method for preparing the data to insert into the table using insertData()
+    // used in User.php -> addUser() method
+    public function insert($array = null){
+        if(!empty($array)){
+            foreach($array as $key => $value){
+                $this->insert_keys[] = $key;
+                $this->insert_values[] = $this->escape($value);
+            }
+        }
+    }
+
+    // Inserts data into the table
+    // used in User.php -> addUser() method
+    public function insertData($users = null){
+        if(!empty($users) && !empty($this->insert_keys) && !empty($this->insert_values)){
+            $sql  = "INSERT INTO {$users} (";
+            $sql .= implode(", ", $this->insert_keys); // implode - joins the values from array using concatinator (,)
+            $sql .= ") VALUES ('";
+            $sql .= implode("', '", $this->insert_values);
+            $sql .= "');";
+            if($this->query($sql)){
+                $this->id = $this->lastID();
+                return true;
+            }
+            return false;
+        }
+    }
+
+    // Method for preparing the info to update the table using updateTable()
+    // used in User.php -> updateUser()method
+    public function update($array = null){
+        if(!empty($array)){
+            foreach($array as $key => $value){
+                $this->update_records[] = "{$key} = '".$this->escape($value)."'";
+            }
+        }
+    }
+
+    // Updates the table info
+    // used in User.php -> updateUser()method and other
+    public function updateTable($table = null, $id = null){
+        if(!empty($table) && !empty($id) && !empty($this->update_records)){
+            $sql  = "UPDATE {$table} SET ";
+            $sql .= implode(", ", $this->update_records);
+            $sql .= " WHERE id = '".$this->escape($id)."'";
+            return $this->query($sql);
+        }
+    }
 
 }
