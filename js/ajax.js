@@ -90,3 +90,20 @@ function ajax_delete(delete_id) {
     xml.open('GET', 'modules/delete.php?delete_id='+delete_id, true);
     xml.send(); // Sending the data to the page
 }
+
+function ajax_update(req_type, id) {
+
+    var xml = new XMLHttpRequest();
+
+    xml.onreadystatechange = function () {
+        if (xml.readyState == 4 && xml.status == 200){
+            var update = document.getElementById("update");
+            location.reload();
+            update.innerHTML = '<p style="padding: 20px;" class="bg-success">Отзыв успешно обналён!</p>';
+        }
+    }
+
+    // Creating the request
+    xml.open('GET', 'modules/update.php?req_type='+req_type+'&id='+id, true);
+    xml.send(); // Sending the data to the page
+}

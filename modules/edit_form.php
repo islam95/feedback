@@ -85,7 +85,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
 } elseif($_REQUEST['req_type'] == 'edit_button') {
 
     $sql = "UPDATE otziv SET name = '$_REQUEST[ed_name]', email = '$_REQUEST[ed_email]', description = '$_REQUEST[ed_message]', 
-            image = '$_REQUEST[ed_image]' WHERE id = '$_REQUEST[edit_id]'";
+            image = '$_REQUEST[ed_image]', changed = 'Изменен Администратором' WHERE id = '$_REQUEST[edit_id]'";
     $result = $db->query($sql);
 
 }

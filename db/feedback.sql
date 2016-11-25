@@ -29,6 +29,7 @@ CREATE TABLE `otziv` (
   `description` TEXT NOT NULL,
   `date` DATETIME NOT NULL,
   `image` VARCHAR(100) DEFAULT NULL,
+  `changed` VARCHAR(100) DEFAULT NULL,
   `status_id` INT(10) NOT NULL DEFAULT '2',
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`status_id`) REFERENCES `status`(`id`)

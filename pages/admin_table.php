@@ -1,5 +1,6 @@
 <?php
 
+if($_SESSION['login'] === true) {
 
     require_once('template/header.php');
     include 'DB.php';
@@ -17,7 +18,6 @@
             <th>Имя</th>
             <th>Email</th>
             <th>Статус</th>
-            <th>Действия</th>
             <th style="text-align: center;"><span class="glyphicon glyphicon-cog"></span></th>
         </tr>
         </thead>
@@ -39,18 +39,10 @@
                     echo "<td>Отклонен</td>";
                 }
                 ?>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-default" data-toggle="dropdown">Действия <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Принять</a></li>
-                            <li><a href="#">Отклонить</a></li>
-                        </ul>
-                    </div>
-                </td>
                 <td align="center">
-                    <button class="btn btn-default" onclick="ajax_edit('edit_request', <?php echo $rows['id']; ?>);">
+                    <button class="btn btn-success" onclick="ajax_update('accept', <?php echo $rows['id']; ?>);">Принять</button>
+                    <button class="btn btn-info" onclick="ajax_update('reject', <?php echo $rows['id']; ?>);">Отклонить</button>
+                    <button class="btn btn-warning" onclick="ajax_edit('edit_request', <?php echo $rows['id']; ?>);">
                         <span class="glyphicon glyphicon-pencil"></span></button>
                     <button class="btn btn-danger" onclick="ajax_delete(<?php echo $rows['id']; ?>);"><span
                             class="glyphicon glyphicon-trash"></span></button>
@@ -67,8 +59,14 @@
     <div id="edit_message"></div>
     <div id="edit_form"></div>
     <div id="remove"></div>
+    <div id="update"></div>
 
     <?php
     require_once('template/footer.php');
+
+} else {
+    echo "Попытайтесь войти через логин страницу вводя логин и пароль.";
+}
+
 
 ?>
