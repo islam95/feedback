@@ -37,10 +37,11 @@ while ($rows = mysqli_fetch_assoc($result)){
             </div>
             <div class="media-body">
                 <h4 class="media-heading text-capitalize"><?php echo $rows['name']; ?>
-                    <small><?php echo $rows['changed']; ?></small>
+                <small><?php echo $rows['email']; ?></small>
                     <small class="pull-right"><em><?php echo $rows['date']; ?></em></small></h4>
                 <?php echo $rows['description']; ?>
-
+                <br>
+				<small style="color: #3CB371"><?php echo $rows['changed']; ?></small>
             </div>
         </div>
     </div>

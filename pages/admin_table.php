@@ -18,7 +18,7 @@ if($_SESSION['login'] === true) {
             <th>Имя</th>
             <th>Email</th>
             <th>Статус</th>
-            <th style="text-align: center;"><span class="glyphicon glyphicon-cog"></span></th>
+            <th style="text-align: center;">Действия</th>
         </tr>
         </thead>
         <tbody>
@@ -29,7 +29,13 @@ if($_SESSION['login'] === true) {
             ?>
             <tr>
                 <td><?php echo $rows['id']; ?></td>
-                <td><img src="images/<?php echo $rows['image']; ?>" width="30" height="30"></td>
+                <td><img src="images/<?php
+                    if ($rows['image'] != ''){
+                        echo $rows['image'];
+                    } else {
+                        echo "no_image.png";
+                    }
+                    ?>" width="30" height="30"></td>
                 <td><?php echo $rows['name']; ?></td>
                 <td><?php echo $rows['email']; ?></td>
                 <?php
