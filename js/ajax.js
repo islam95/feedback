@@ -2,7 +2,7 @@
  * Created by islam on 19/11/2016.
  */
 
-function ajax_onload() {
+function ajax_onload(sort) {
 
     var xmlhttp = new XMLHttpRequest();
 
@@ -13,7 +13,7 @@ function ajax_onload() {
         }
     }
     // Creating the request
-    xmlhttp.open('GET', 'modules/all_feedbacks.php', true);
+    xmlhttp.open('GET', 'modules/all_feedbacks.php?sort='+sort, true);
     xmlhttp.send(); // Sending the data to the page
 }
 

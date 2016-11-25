@@ -9,13 +9,13 @@
 
     <div class="sorting">
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
+            <label class="btn btn-primary active" onclick="ajax_onload('sort_date')">
                 <input type="radio" name="option1" id="option1" autocomplete="off" checked> По дате
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-primary" onclick="ajax_onload('sort_name')">
                 <input type="radio" name="option2" id="option2" autocomplete="off"> По имени
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn-primary" onclick="ajax_onload('sort_email')">
                 <input type="radio" name="option3" id="option3" autocomplete="off"> По email
             </label>
         </div>
