@@ -14,13 +14,6 @@ class DB
     private $db_name = "feedback";
     private $connectToDB = false;
 
-    public $id;
-    // for inserting records to the database.
-    public $insert_keys = array();
-    public $insert_values = array();
-    // for updating records.
-    public $update_records = array();
-
     public $last_query = null;
     public $affected_rows = 0;
 
@@ -51,22 +44,6 @@ class DB
         }
     }
 
-    // To escape all illegal characters for interacting with the database.
-    public function escape($value) {
-        // For the PHP higher versions
-        if(function_exists("mysqli_real_escape_string")) {
-            if (get_magic_quotes_gpc()) {
-                $value = stripslashes($value);
-            }
-            $value = mysqli_real_escape_string($this->connectToDB, $value);
-        } else { // For the PHP lower versions
-            if(!get_magic_quotes_gpc()) {
-                $value = addcslashes($value);
-            }
-        }
-        return $value;
-    }
-
     public function query($sql) {
         $this->last_query = $sql;
         $result = mysqli_query($this->connectToDB, $sql);
@@ -84,76 +61,5 @@ class DB
         }
     }
 
-    // To get all records from the table in db
-    public function getAllRecords($sql) {
-        $result = $this->query($sql);
-        $output = array();
-        while($row = mysqli_fetch_assoc($result)) {
-            $output[] = $row;
-        }
-        mysqli_free_result($result);
-        return $output;
-    }
-
-    // To get just one specific record from the table in db
-    public function getOneRecord($sql) {
-        $output = $this->getAllRecords($sql);
-        return array_shift($output);
-    }
-
-    // the id of the lastly inserted record to the database
-    public function lastID() {
-        return mysqli_insert_id($this->connectToDB);
-    }
-
-
-    // Method for preparing the data to insert into the table using insertData()
-    // used in User.php -> addUser() method
-    public function insert($array = null){
-        if(!empty($array)){
-            foreach($array as $key => $value){
-                $this->insert_keys[] = $key;
-                $this->insert_values[] = $this->escape($value);
-            }
-        }
-    }
-
-    // Inserts data into the table
-    // used in User.php -> addUser() method
-    public function insertData($users = null){
-        if(!empty($users) && !empty($this->insert_keys) && !empty($this->insert_values)){
-            $sql  = "INSERT INTO {$users} (";
-            $sql .= implode(", ", $this->insert_keys); // implode - joins the values from array using concatinator (,)
-            $sql .= ") VALUES ('";
-            $sql .= implode("', '", $this->insert_values);
-            $sql .= "');";
-            if($this->query($sql)){
-                $this->id = $this->lastID();
-                return true;
-            }
-            return false;
-        }
-    }
-
-    // Method for preparing the info to update the table using updateTable()
-    // used in User.php -> updateUser()method
-    public function update($array = null){
-        if(!empty($array)){
-            foreach($array as $key => $value){
-                $this->update_records[] = "{$key} = '".$this->escape($value)."'";
-            }
-        }
-    }
-
-    // Updates the table info
-    // used in User.php -> updateUser()method and other
-    public function updateTable($table = null, $id = null){
-        if(!empty($table) && !empty($id) && !empty($this->update_records)){
-            $sql  = "UPDATE {$table} SET ";
-            $sql .= implode(", ", $this->update_records);
-            $sql .= " WHERE id = '".$this->escape($id)."'";
-            return $this->query($sql);
-        }
-    }
 
 }

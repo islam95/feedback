@@ -42,7 +42,7 @@ $(document).on('click', '#preview-btn', function () {
     $('#pre_date').html(today);
 
     $('#feed_preview').show();
-});
+}); // preview
 
 document.my_form.name.onblur = function () {
     if(document.my_form.name.value === ""){
@@ -50,7 +50,7 @@ document.my_form.name.onblur = function () {
     } else {
         document.getElementById("name-error").innerHTML = "";
     }
-}
+} //name
 
 document.my_form.email.onblur = function () {
 
@@ -65,7 +65,7 @@ document.my_form.email.onblur = function () {
         document.getElementById("email-error").innerHTML = "";
     }
 
-} // email
+} //email
 
 document.my_form.message.onblur = function () {
     if(document.my_form.message.value === ""){
@@ -73,5 +73,5 @@ document.my_form.message.onblur = function () {
     } else {
         document.getElementById("message-error").innerHTML = "";
     }
-}
+} //message
 

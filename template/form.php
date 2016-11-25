@@ -50,7 +50,6 @@
                         </div>
                     </span>
                         <input type="text" id="file" class="form-control image-preview-filename" disabled="disabled">
-                        <!-- don't give a name === doesn't send on POST/GET -->
                     </div>
                 </div>
 

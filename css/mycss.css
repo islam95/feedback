@@ -1,9 +1,4 @@
 
-.red {
-	background-color: red;
-}
-
-
 /***** Стиль вставки картинки *****/
 .input-group {
 	margin-left: 80px;
@@ -39,7 +34,6 @@
 .errorForm {
 	color: #ff0000;
 }
-
 .sorting {
 	padding-bottom: 20px;
 }

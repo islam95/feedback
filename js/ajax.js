@@ -99,7 +99,7 @@ function ajax_update(req_type, id) {
         if (xml.readyState == 4 && xml.status == 200){
             var update = document.getElementById("update");
             location.reload();
-            update.innerHTML = '<p style="padding: 20px;" class="bg-success">Отзыв успешно обналён!</p>';
+            update.innerHTML = '<p style="padding: 20px;" class="bg-success">Отзыв успешно обнавлён!</p>';
         }
     }
 

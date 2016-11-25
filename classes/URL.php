@@ -12,16 +12,10 @@ class URL
     public static $page = "page"; // key word for identifying the loading page
     public static $params = array();
 
-    // returning the url
-    public static function getParameter($param) {
-        return isset($_GET[$param]) && $_GET[$param] != "" ?
-            $_GET[$param] : null;
-    }
 
     // Return current page
     public static function currentPage() {
-        return isset($_GET[self::$page]) ?
-            $_GET[self::$page] : 'index';
+        return isset($_GET[self::$page]) ? $_GET[self::$page] : 'index';
     }
 
     public static function getPage() {
