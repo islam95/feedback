@@ -11,6 +11,6 @@ Used programming languages:
 2. CSS
 3. JavaScript
 4. AJAX
-5. jQuery library
+5. jQuery
 6. PHP
 7. MySQL
