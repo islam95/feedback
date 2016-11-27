@@ -1,7 +1,7 @@
 
 <div class="col-md-8 col-md-offset-2">
     <div class="well well-sm">
-        <form class="form-horizontal" action="" method="post" id="my_form" name="my_form">
+        <form class="form-horizontal" enctype="multipart/form-data" action="../modules/upload.php" method="post" id="my_form" name="my_form">
             <fieldset>
                 <!-- Form Name -->
                 <legend class="text-center">Оставить отзыв</legend>
@@ -51,6 +51,9 @@
                     </span>
                         <input type="text" id="file" class="form-control image-preview-filename" disabled="disabled">
                     </div>
+                </div>
+
+                <div id="photo">
                 </div>
 
                 <!-- Form actions -->

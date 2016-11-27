@@ -33,7 +33,7 @@ while ($rows = mysqli_fetch_assoc($result)){
                     echo "no_image.png";
                 }
 
-                ?>" width="60" height="60" alt="">
+                ?>" width="100" height="100" alt="">
             </div>
             <div class="media-body">
                 <h4 class="media-heading text-capitalize"><?php echo $rows['name']; ?>

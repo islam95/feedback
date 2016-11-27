@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $('#feed_preview').hide();
+    $('#my_form').ajaxForm({
+        target: '#photo'
+    }).submit();
 });
 
 $(document).on('click', '#preview-btn', function () {
@@ -36,7 +39,7 @@ $(document).on('click', '#preview-btn', function () {
 
     var today = yyyy + '-' + dd + '-' + mm + " " + h + ":" + m + ":" + s;
 
-    $('#pre_image').html('<img src="images/'+image+'" width="80" height="60" alt=""/>');
+    $('#pre_image').html('<img src="images/'+image+'" width="100" height="100" alt=""/>');
     $('#pre_name').html(name);
     $('#pre_message').html(message);
     $('#pre_date').html(today);

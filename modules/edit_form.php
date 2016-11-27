@@ -63,7 +63,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
                         </div>
                     </span>
                         <input type="text" value="<?php echo $rows['image']; ?>" id="file" class="form-control image-preview-filename" disabled="disabled">
-                        <!-- don't give a name === doesn't send on POST/GET -->
+
                     </div>
                 </div>
 

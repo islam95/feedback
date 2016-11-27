@@ -23,5 +23,4 @@ if($_REQUEST['id'] != '') {
         $result = $db->query($sql);
     }
 
-
 }

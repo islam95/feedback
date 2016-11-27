@@ -50,8 +50,8 @@ if($_SESSION['login'] === true) {
                     <button class="btn btn-info" onclick="ajax_update('reject', <?php echo $rows['id']; ?>);">Отклонить</button>
                     <button class="btn btn-warning" onclick="ajax_edit('edit_request', <?php echo $rows['id']; ?>);">
                         <span class="glyphicon glyphicon-pencil"></span></button>
-                    <button class="btn btn-danger" onclick="ajax_delete(<?php echo $rows['id']; ?>);"><span
-                            class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-danger" onclick="ajax_delete(<?php echo $rows['id']; ?>);">
+                        <span class="glyphicon glyphicon-trash"></span></button>
                 </td>
             </tr>
 
@@ -71,7 +71,7 @@ if($_SESSION['login'] === true) {
     require_once('template/footer.php');
 
 } else {
-    echo "Попытайтесь войти через логин страницу вводя логин и пароль.";
+    header('LOCATION: ?page=login');
 }
 
 

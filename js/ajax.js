@@ -29,6 +29,7 @@ function ajax_send(send_feedback) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
             var feed_send = document.getElementById("feed_send");
             feed_send.innerHTML = xmlhttp.responseText;
+            window.location.reload();
         }
     }
     // Creating the request
