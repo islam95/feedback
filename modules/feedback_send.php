@@ -25,6 +25,3 @@ if ($_REQUEST['send_feed'] != ''){
 }
 
 ?>
-
-
-

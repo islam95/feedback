@@ -28,46 +28,47 @@
 
     ?>
 
-    <div class="col-md-6 col-md-offset-3">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>Админ Логин</strong>
-            </div>
-            <div class="panel-body">
-                <form role="form" action="" method="POST">
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="form-group">
-                                    <div class="input-group">
-												<span class="input-group-addon">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<strong>Админ Логин</strong>
+			</div>
+			<div class="panel-body">
+				<form role="form" action="" method="POST">
+					<fieldset>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon">
 													<i class="glyphicon glyphicon-user"></i>
 												</span>
-                                        <input class="form-control" placeholder="Логин" name="username" type="text"
-                                               autofocus>
-                                        <div class='errorForm'><?php //echo $userError; ?></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-												<span class="input-group-addon">
+										<input class="form-control" placeholder="Логин" name="username" type="text" autofocus>
+										<div class='errorForm'>
+											<?php //echo $userError; ?>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon">
 													<i class="glyphicon glyphicon-lock"></i>
 												</span>
-                                        <input class="form-control" placeholder="******" name="password"
-                                               type="password">
-                                        <div class='errorForm'><?php //echo $userError; ?></div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-offset-1">
-                                    <input type="submit" name="enter" class="btn btn-lg btn-primary btn-block"
-                                           value="Войти">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-    </div>
+										<input class="form-control" placeholder="******" name="password" type="password">
+										<div class='errorForm'>
+											<?php //echo $userError; ?>
+										</div>
+									</div>
+								</div>
+								<div class="form-group col-md-offset-1">
+									<input type="submit" name="enter" class="btn btn-lg btn-primary btn-block" value="Войти">
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
 
-    <?php require_once('footer.php'); ?>
+	<?php require_once('footer.php'); ?>

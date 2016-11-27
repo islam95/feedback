@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b283104c-ba3f-4ecd-a766-da6964e79915" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/upload.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/Application.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/Helper.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/URL.php" afterPath="$PROJECT_DIR$/classes/URL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/all_feedbacks.php" afterPath="$PROJECT_DIR$/modules/all_feedbacks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/edit_form.php" afterPath="$PROJECT_DIR$/modules/edit_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/update.php" afterPath="$PROJECT_DIR$/modules/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/admin_table.php" afterPath="$PROJECT_DIR$/pages/admin_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/content.php" afterPath="$PROJECT_DIR$/template/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/footer.php" afterPath="$PROJECT_DIR$/template/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/form.php" afterPath="$PROJECT_DIR$/template/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/header.php" afterPath="$PROJECT_DIR$/template/header.php" />
-    </list>
+    <list default="true" id="b283104c-ba3f-4ecd-a766-da6964e79915" name="Default" comment="" />
     <ignored path="feedback.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -257,12 +240,12 @@
       <workItem from="1479921504882" duration="5044000" />
       <workItem from="1479975863638" duration="26093000" />
       <workItem from="1480149170449" duration="5875000" />
-      <workItem from="1480252516317" duration="3656000" />
+      <workItem from="1480252516317" duration="3742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129464000" />
+    <option name="totallyTimeSpent" value="129550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="834" height="729" extended-state="0" />

@@ -1,9 +1,10 @@
-
 /***** Стиль вставки картинки *****/
+
 .input-group {
 	margin-left: 80px;
 	margin-bottom: 25px;
 }
+
 .image-preview-input {
 	position: relative;
 	overflow: hidden;
@@ -12,6 +13,7 @@
 	background-color: #fff;
 	border-color: #ccc;
 }
+
 .image-preview-input input[type=file] {
 	position: absolute;
 	top: 0;
@@ -23,17 +25,21 @@
 	opacity: 0;
 	filter: alpha(opacity=0);
 }
+
 .image-preview-input-title {
-	margin-left:3px;
+	margin-left: 3px;
 }
+
 /****************************/
 
 .prosmotr {
 	margin-right: 5px;
 }
+
 .errorForm {
 	color: #ff0000;
 }
+
 .sorting {
 	padding-bottom: 20px;
 }
