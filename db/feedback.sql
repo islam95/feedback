@@ -34,5 +34,5 @@ CREATE TABLE `otziv` (
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`status_id`) REFERENCES `status`(`id`)
 );
-INSERT INTO `otziv` VALUES(1, 'Islam', 'islamchik@mail.ru', 'ыфваыпапвып', '2016-11-15 18:34:23', 'some.jpg', 1);
-INSERT INTO `otziv` VALUES(2, 'Вердум', 'verdum@mail.ru', 'фываоролдло', '2016-11-15 21:12:24', NULL, 2);
+INSERT INTO `otziv` VALUES(1, 'Islam', 'islamchik@mail.ru', 'hgfjhgkj', '2016-11-15 18:34:23', 'some.jpg', NULL, 1);
+INSERT INTO `otziv` VALUES(2, 'Вердум', 'verdum@mail.ru', 'kjhhjgjhhkuiyui', '2016-11-15 21:12:24', NULL, NULL, 2);
